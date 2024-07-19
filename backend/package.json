@@ -1,0 +1,17 @@
+{
+  "name": "aa-backend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "deploy": "npm run build && serverless deploy"
+  },
+  "author": "Peterson V",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.141",
+    "@types/node": "^20.14.11",
+    "typescript": "^5.5.3"
+  }
+}
