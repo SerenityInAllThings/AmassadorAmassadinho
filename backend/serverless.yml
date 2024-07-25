@@ -9,6 +9,9 @@ provider:
 functions:
   getMatches:
     handler: dist/api.getMatches
+    memorySize: 256
+    environment:
+      TZ: America/Sao_Paulo
     events:
       - httpApi:
           path: /
