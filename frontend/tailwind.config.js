@@ -13,5 +13,6 @@ export default {
       },
     },
   },
+  safelist: ["bg-brandDarkBlue2", "bg-brandGreen"],
   plugins: [],
-};
+}
