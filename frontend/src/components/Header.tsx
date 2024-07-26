@@ -22,7 +22,10 @@ export const Header = () => {
   const { year } = useDate()
 
   return (
-    <header className="flex h-20 w-screen items-center justify-between gap-x-1 overflow-x-auto bg-brandDarkBlue p-1 font-bold text-white">
+    <header
+      className="flex h-20 w-screen items-center justify-between gap-x-1 overflow-x-auto bg-brandDarkBlue p-1 font-bold text-white"
+      style={{ minHeight: "5rem" }}
+    >
       <div className="flex flex-row justify-around gap-x-1">
         {months.map((month, i) => (
           <MonthButton month={month} key={i} />

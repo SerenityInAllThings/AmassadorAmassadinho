@@ -21,7 +21,7 @@ export const getMatches = async (
     statusCode: 200,
     body: JSON.stringify({ matchesPerDay, totalMatches, year, month }),
     headers: {
-      "Access-Control-Allow-Origin": "*.petersonv.click",
+      "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET",
       "Content-Type": "application/json",
     },
