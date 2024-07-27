@@ -12,13 +12,19 @@ export const App = () => {
         <div className="flex h-screen w-screen flex-col overflow-y-auto overflow-x-hidden">
           <Header />
           <div className="flex h-full w-full flex-row">
-            <div className="flex h-full w-1/2 flex-col justify-start overflow-y-auto bg-brandGreen pb-2 pl-16 pr-24 pt-8">
+            <div
+              className="flex w-1/2 flex-col justify-start overflow-y-auto bg-brandGreen pb-2 pl-16 pr-24 pt-8"
+              style={{ maxHeight: "calc(100vh - 5rem)" }}
+            >
               <UserCard user="Amassadinho" />
               <div className="mt-2">
                 <Calendar type="Prey" />
               </div>
             </div>
-            <div className="flex h-full w-1/2 flex-col justify-start overflow-y-auto bg-brandRed pb-2 pl-28 pr-16 pt-8">
+            <div
+              className="flex h-full w-1/2 flex-col justify-start overflow-y-auto bg-brandRed pb-2 pl-28 pr-16 pt-8"
+              style={{ maxHeight: "calc(100vh - 5rem)" }}
+            >
               <UserCard user="Amassador" />
               <div className="mt-2">
                 <Calendar type="Predator" />
