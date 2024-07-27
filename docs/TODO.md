@@ -2,6 +2,10 @@
 
 - Automatizar deploy usando github actions
 - Minificar o frontend
+  - HTML
+  - CSS
+  - JS
+  - Trocar imagens para svg ou webp
 - Fazer frontend ficar responsivo
 - Poder selecionar outros jogadores
 - Salvar ano/mês atual no localStorage
