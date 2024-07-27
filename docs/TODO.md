@@ -1,6 +1,7 @@
 # Backlog
 
-- Automatizar deploy
+- ~~Automatizar deploy~~
+- Automatizar deploy usando github actions
 - Usar compressão gzip para frontend/backend
 - Minificar o frontend
 - ~~Usar imagens menores~~

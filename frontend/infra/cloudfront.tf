@@ -34,6 +34,7 @@ resource "aws_cloudfront_distribution" "website" {
     min_ttl                = 1
     default_ttl            = 86400
     max_ttl                = 31536000
+    compress               = true
 
     forwarded_values {
       query_string = true
