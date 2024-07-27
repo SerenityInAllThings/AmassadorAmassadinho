@@ -1,10 +1,7 @@
 # Backlog
 
-- ~~Automatizar deploy~~
 - Automatizar deploy usando github actions
-- Usar compressão gzip para frontend/backend
 - Minificar o frontend
-- ~~Usar imagens menores~~
 - Fazer frontend ficar responsivo
 - Poder selecionar outros jogadores
 - Salvar ano/mês atual no localStorage
@@ -14,3 +11,9 @@
   - Mostrar totalizador de flexões ao longo do tempo
 - Melhorar scroll de seleção de ano
 - Adicionar indicador de carregamento no frontend
+
+## Feitos
+
+- ~~Automatizar deploy~~
+- ~~Usar compressão gzip para frontend~~
+- ~~Usar imagens menores~~
