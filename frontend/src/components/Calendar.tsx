@@ -3,7 +3,7 @@ import { useDate } from "./DateContext"
 import { useGames } from "../hooks/useGames"
 import { useMemo } from "react"
 
-const pushUpsPerGame = 20
+export const pushUpsPerGame = 20
 
 export type CalendarType = "Predator" | "Prey"
 
@@ -16,16 +16,6 @@ export const Calendar = ({ type }: Props) => {
   const date = new Date(year, month - 1, 2)
   const daysInMonth = getDaysInMonth(date)
   const allDays = Array.from({ length: daysInMonth }, (_, i) => i + 1)
-  const { games } = useGames(year, month)
-  const totalGames = games?.totalMatches ?? 0
-  const totalTime = games?.matchesPerDay
-    ? Object.entries(games.matchesPerDay).reduce(
-        (acc, [_, value]) => acc + value.seconds,
-        0,
-      )
-    : 0
-  const totalHours = Math.floor(totalTime / 3600)
-  const totalMinutes = Math.floor((totalTime % 3600) / 60)
 
   return (
     <div className="mt-2 flex w-full flex-col">
@@ -33,20 +23,6 @@ export const Calendar = ({ type }: Props) => {
         {allDays.map((day, i) => (
           <DayCard key={i} day={day} type={type} />
         ))}
-      </div>
-      <div className="mt-1 flex flex-col gap-y-1 text-lg font-bold text-white">
-        {type === "Prey" ? (
-          <>
-            <p>Total de jogos: {totalGames}</p>
-            <p>
-              Tempo total: {totalHours} horas {totalMinutes} minutos
-            </p>
-          </>
-        ) : (
-          <>
-            <p>Total de flexões: {totalGames * pushUpsPerGame}</p>
-          </>
-        )}
       </div>
     </div>
   )
