@@ -40,14 +40,14 @@ export const UserCard = ({ user }: Props) => {
       <div className="mb-1 mt-1 flex flex-col justify-center gap-y-1 text-lg font-bold text-white">
         {isPredator(user) ? (
           <>
+            <p>Total de flexões: {totalGames * pushUpsPerGame}</p>
+          </>
+        ) : (
+          <>
             <p>Total de jogos: {totalGames}</p>
             <p>
               Tempo total: {totalHours} horas {totalMinutes} minutos
             </p>
-          </>
-        ) : (
-          <>
-            <p>Total de flexões: {totalGames * pushUpsPerGame}</p>
           </>
         )}
       </div>
