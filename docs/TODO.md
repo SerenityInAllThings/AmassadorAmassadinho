@@ -12,3 +12,4 @@
   - Mostrar totalizador de jogos de todos os jogadores ao longo do tempo
   - Mostrar totalizador de flexões ao longo do tempo
 - Melhorar scroll de seleção de ano
+- Adicionar indicador de carregamento no frontend

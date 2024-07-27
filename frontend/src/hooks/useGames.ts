@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query"
 
-const url = "https://tzesyw55oa.execute-api.us-east-1.amazonaws.com/"
+const url = "https://t4sw1uzfje.execute-api.sa-east-1.amazonaws.com/"
 
 type GamesResponse = {
   matchesPerDay: {
