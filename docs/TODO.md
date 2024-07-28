@@ -2,10 +2,11 @@
 
 - Automatizar deploy usando github actions
 - Minificar o frontend
-  - HTML
-  - CSS
-  - JS
+  - ~~HTML~~
+  - ~~CSS~~
+  - ~~JS~~
   - Trocar imagens para svg ou webp
+  - Trocar react por preact para diminuir o tamanho do bundle
 - Fazer frontend ficar responsivo
 - Poder selecionar outros jogadores
 - Salvar ano/mês atual no localStorage

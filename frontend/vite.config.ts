@@ -6,4 +6,7 @@ import { ViteMinifyPlugin } from "vite-plugin-minify"
 export default defineConfig({
   plugins: [react(), ViteMinifyPlugin()],
   publicDir: "./public",
+  build: {
+    minify: "terser",
+  },
 })
