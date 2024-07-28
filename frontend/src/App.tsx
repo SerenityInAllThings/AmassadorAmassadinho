@@ -13,7 +13,7 @@ export const App = () => {
           <Header />
           <div className="flex h-full w-full flex-row">
             <div
-              className="flex w-1/2 flex-col justify-start overflow-y-auto bg-brandGreen pb-2 pt-8"
+              className="flex w-1/2 flex-col justify-start overflow-y-auto bg-brandGreen pb-2 pl-16 pr-20 pt-8"
               style={{ maxHeight: "calc(100vh - 5rem)" }}
             >
               <UserCard user="Amassadinho" />
@@ -22,7 +22,7 @@ export const App = () => {
               </div>
             </div>
             <div
-              className="flex h-full w-1/2 flex-col justify-start overflow-y-auto bg-brandRed pb-2 pt-8"
+              className="flex h-full w-1/2 flex-col justify-start overflow-y-auto bg-brandRed pb-2 pl-20 pr-16 pt-8"
               style={{ maxHeight: "calc(100vh - 5rem)" }}
             >
               <UserCard user="Amassador" />
@@ -33,7 +33,7 @@ export const App = () => {
           </div>
           <img
             src={vs}
-            className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-2/3"
+            className="pointer-events-none absolute left-1/2 top-1/2 h-80 -translate-x-1/2 -translate-y-2/3"
           />
         </div>
       </DateProvider>
