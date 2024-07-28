@@ -1,4 +1,3 @@
-import { getDaysInMonth, format } from "date-fns"
 import { useDate } from "./DateContext"
 import { useGames } from "../hooks/useGames"
 import { useMemo } from "react"
@@ -11,10 +10,13 @@ export type Props = {
   type: CalendarType
 }
 
+/** Uses 1-12 month */
+const getDaysInMonth = (year: number, month: number) =>
+  new Date(year, month, 0).getDate()
+
 export const Calendar = ({ type }: Props) => {
   const { year, month } = useDate()
-  const date = new Date(year, month - 1, 2)
-  const daysInMonth = getDaysInMonth(date)
+  const daysInMonth = getDaysInMonth(year, month)
   const allDays = Array.from({ length: daysInMonth }, (_, i) => i + 1)
 
   return (
@@ -37,7 +39,7 @@ export const DayCard = ({ day, type }: DayCardProps) => {
   const { year, month } = useDate()
   const { games } = useGames(year, month)
   const date = new Date(year, month - 1, day)
-  const formattedDate = format(date, "yyyy-MM-dd")
+  const formattedDate = date.toISOString().split("T")[0]
   const gamesInDay = useMemo(
     () =>
       games?.matchesPerDay?.[formattedDate] ?? {

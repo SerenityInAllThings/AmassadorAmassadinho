@@ -3,8 +3,10 @@ import { ComponentChildren } from "preact"
 
 type ContextValue = {
   year: number
+  /** Month is 1-12 */
   month: number
   setYear: (year: number) => void
+  /** Month is 1-12 */
   setMonth: (month: number) => void
 }
 
