@@ -1,10 +1,10 @@
 import { defineConfig } from "vite"
-import react from "@vitejs/plugin-react"
 import { ViteMinifyPlugin } from "vite-plugin-minify"
+import preact from "@preact/preset-vite"
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), ViteMinifyPlugin()],
+  plugins: [preact(), ViteMinifyPlugin()],
   publicDir: "./public",
   build: {
     minify: "terser",

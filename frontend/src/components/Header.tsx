@@ -73,7 +73,7 @@ export const YearButton = ({ year }: { year: number }) => {
   return (
     <div className="flex items-center align-middle">
       <button
-        className="bg-brandDarkBlue2 mr-1 rounded-md p-1 pl-3 pr-3 text-xl"
+        className="mr-1 rounded-md bg-brandDarkBlue2 p-1 pl-3 pr-3 text-xl"
         onClick={() => setIsSelectorOpen(!isSelectorOpen)}
       >
         {year}
@@ -101,10 +101,10 @@ export const YearSelector = ({
   }, [])
 
   return (
-    <div className="border-brandDarkBlue2 fixed right-1 top-14 z-10 flex h-72 flex-col items-center gap-y-1 overflow-y-auto rounded-md border bg-brandDarkBlue p-1 align-middle">
+    <div className="fixed right-1 top-14 z-10 flex h-72 flex-col items-center gap-y-1 overflow-y-auto rounded-md border border-brandDarkBlue2 bg-brandDarkBlue p-1 align-middle">
       {years.map((year, i) => (
         <button
-          className="bg-brandDarkBlue2 ml-1 mr-1 rounded-md p-1 pl-3 pr-3 text-lg"
+          className="ml-1 mr-1 rounded-md bg-brandDarkBlue2 p-1 pl-3 pr-3 text-lg"
           onMouseDown={() => {
             setYear(year)
             onSelect?.(year)

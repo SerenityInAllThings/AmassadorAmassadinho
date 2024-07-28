@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react"
+import { ComponentChildren } from "preact"
 
 type ContextValue = {
   year: number
@@ -8,7 +9,7 @@ type ContextValue = {
 }
 
 type Props = {
-  children: string | JSX.Element | JSX.Element[]
+  children: string | ComponentChildren
 }
 
 export const DateContext = createContext<ContextValue | undefined>(undefined)
