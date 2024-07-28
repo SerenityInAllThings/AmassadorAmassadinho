@@ -13,6 +13,13 @@ export default {
       },
     },
   },
-  safelist: ["bg-brandDarkBlue2", "bg-brandGreen"],
+  safelist: [
+    "bg-brandDarkBlue2",
+    "bg-brandGreen",
+    "justify-start",
+    "justify-end",
+    "text-white",
+    "text-gray-400",
+  ],
   plugins: [],
 }

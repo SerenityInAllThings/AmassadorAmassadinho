@@ -18,14 +18,13 @@ export const Calendar = ({ type }: Props) => {
   const { year, month } = useDate()
   const daysInMonth = getDaysInMonth(year, month)
   const allDays = Array.from({ length: daysInMonth }, (_, i) => i + 1)
+  const justify = type === "Predator" ? "justify-end" : "justify-start"
 
   return (
-    <div className="mt-2 flex w-full flex-col">
-      <div className="flex flex-wrap gap-1">
-        {allDays.map((day, i) => (
-          <DayCard key={i} day={day} type={type} />
-        ))}
-      </div>
+    <div className={`mt-2 flex flex-wrap gap-1 ${justify}`}>
+      {allDays.map((day, i) => (
+        <DayCard key={i} day={day} type={type} />
+      ))}
     </div>
   )
 }

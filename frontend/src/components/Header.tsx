@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react"
 import { useDate } from "./DateContext"
-import background from "../assets/scratched.png"
+import background from "../assets/scratched.svg"
 
 export type Month = { name: string; number: number }
 const months: Month[] = [
@@ -23,7 +23,7 @@ export const Header = () => {
 
   return (
     <header
-      className="flex h-20 w-screen items-center justify-between gap-x-1 overflow-x-auto bg-brandDarkBlue p-1 font-bold text-white"
+      className="flex h-20 w-screen items-center justify-between gap-x-1 overflow-x-auto bg-brandDarkBlue p-1 pl-2 pr-2 font-bold text-white"
       style={{ minHeight: "5rem" }}
     >
       <div className="flex flex-row justify-around gap-x-1">
@@ -52,11 +52,12 @@ export const MonthButton = ({ month: { name, number } }: { month: Month }) => {
   }, [isDisabled])
   const isSelected = number === month
   const backgroundColor = isSelected ? "bg-brandGreen" : "bg-brandDarkBlue2"
+  const textColor = isDisabled ? "text-gray-400" : "text-white"
 
   return (
     <div className="flex items-center align-middle">
       <button
-        className={`${backgroundColor} w-24 rounded-sm pb-4 pt-4 text-center 2xl:w-36 2xl:text-xl`}
+        className={`${backgroundColor} ${textColor} w-24 rounded-sm pb-4 pt-4 text-center 2xl:w-36 2xl:text-xl`}
         onMouseDown={() => setMonth(number)}
         style={style}
         disabled={isDisabled}
