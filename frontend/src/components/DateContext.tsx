@@ -1,5 +1,6 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext } from "react"
 import { ComponentChildren } from "preact"
+import { useNumericLocalStorage } from "../hooks/useLocalStorage"
 
 type ContextValue = {
   year: number
@@ -17,8 +18,14 @@ type Props = {
 export const DateContext = createContext<ContextValue | undefined>(undefined)
 
 export const DateProvider = ({ children }: Props) => {
-  const [year, setYear] = useState(new Date().getFullYear())
-  const [month, setMonth] = useState(new Date().getMonth() + 1)
+  const [year, setYear] = useNumericLocalStorage(
+    "year",
+    new Date().getFullYear(),
+  )
+  const [month, setMonth] = useNumericLocalStorage(
+    "month",
+    new Date().getMonth() + 1,
+  )
 
   const contextValue = {
     year,
