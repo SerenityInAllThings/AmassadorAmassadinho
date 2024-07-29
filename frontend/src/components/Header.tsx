@@ -57,7 +57,7 @@ export const MonthButton = ({ month: { name, number } }: { month: Month }) => {
   return (
     <div className="flex items-center align-middle">
       <button
-        className={`${backgroundColor} ${textColor} w-24 rounded-sm pb-4 pt-4 text-center 2xl:w-36 2xl:text-xl`}
+        className={`${backgroundColor} ${textColor} w-20 rounded-sm pb-4 pt-4 text-center text-sm xl:w-24 xl:text-base 2xl:w-32 2xl:text-xl`}
         onMouseDown={() => setMonth(number)}
         style={style}
         disabled={isDisabled}
@@ -102,7 +102,7 @@ export const YearSelector = ({
   }, [])
 
   return (
-    <div className="fixed right-1 top-14 z-10 flex h-72 flex-col items-center gap-y-1 overflow-y-auto rounded-md border border-brandDarkBlue2 bg-brandDarkBlue p-1 align-middle">
+    <div className="fixed right-2 top-16 z-10 flex h-72 flex-col items-center gap-y-1 overflow-y-auto rounded-md border border-brandDarkBlue2 bg-brandDarkBlue p-1 align-middle">
       {years.map((year, i) => (
         <button
           className="ml-1 mr-1 rounded-md bg-brandDarkBlue2 p-1 pl-3 pr-3 text-lg"

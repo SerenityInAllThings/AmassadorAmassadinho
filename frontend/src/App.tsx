@@ -13,7 +13,7 @@ export const App = () => {
           <Header />
           <div className="flex h-full w-full flex-row">
             <div
-              className="flex w-1/2 flex-col justify-start overflow-y-auto bg-brandGreen pb-2 pl-16 pr-20 pt-8"
+              className="flex w-1/2 flex-col justify-start overflow-y-auto bg-brandGreen pb-2 pl-2 pr-3 pt-8 lg:pl-12 lg:pr-14 xl:pl-16 xl:pr-20"
               style={{ maxHeight: "calc(100vh - 5rem)" }}
             >
               <UserCard user="Amassadinho" />
@@ -22,7 +22,7 @@ export const App = () => {
               </div>
             </div>
             <div
-              className="flex h-full w-1/2 flex-col justify-start overflow-y-auto bg-brandRed pb-2 pl-20 pr-16 pt-8"
+              className="flex h-full w-1/2 flex-col justify-start overflow-y-auto bg-brandRed pb-2 pl-3 pr-2 pt-8 lg:pl-14 lg:pr-12 xl:pl-20 xl:pr-16"
               style={{ maxHeight: "calc(100vh - 5rem)" }}
             >
               <UserCard user="Amassador" />

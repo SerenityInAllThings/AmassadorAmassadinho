@@ -66,7 +66,7 @@ export const Totalizer = ({ user }: Props) => {
   }, [games])
 
   return (
-    <div className="mb-1 mt-1 flex flex-col justify-center gap-y-1 text-lg font-bold text-white">
+    <div className="mb-1 mt-1 flex flex-col justify-center gap-y-1 text-xs font-bold text-white sm:text-sm md:text-base lg:text-lg">
       {isPredator(user) ? (
         <>
           <p>Total de flexões: {totalGames * pushUpsPerGame}</p>
