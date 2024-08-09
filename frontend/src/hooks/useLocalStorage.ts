@@ -7,7 +7,7 @@ import {
   SetStateAction,
 } from "react"
 
-const debounceTime = 200 // Change this to 0 for testing
+const debounceTime = 500 // Change this to 0 for testing
 
 const useLocalStorage = (
   key: string,

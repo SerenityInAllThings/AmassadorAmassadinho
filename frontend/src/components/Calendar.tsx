@@ -1,5 +1,5 @@
 import { useDate } from "./DateContext"
-import { useGames } from "../hooks/useGames"
+import { useCurrentUserGames } from "../hooks/useGames"
 import { useMemo } from "react"
 
 export const pushUpsPerGame = 20
@@ -36,7 +36,7 @@ type DayCardProps = {
 
 export const DayCard = ({ day, type }: DayCardProps) => {
   const { year, month } = useDate()
-  const { games } = useGames(year, month)
+  const { games } = useCurrentUserGames(year, month)
   const date = new Date(year, month - 1, day)
   const formattedDate = date.toISOString().split("T")[0]
   const gamesInDay = useMemo(

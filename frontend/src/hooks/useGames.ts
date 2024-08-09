@@ -1,4 +1,6 @@
 import { useQuery } from "@tanstack/react-query"
+import { useUser } from "../components/UserContext"
+import { ids } from "../domain/user"
 
 const url = "https://t4sw1uzfje.execute-api.sa-east-1.amazonaws.com/"
 
@@ -33,4 +35,10 @@ export const useGames = (year?: number, month?: number, playerId?: string) => {
     queryFn: () => getGames(year, month, playerId),
   })
   return { games, isLoadingGames }
+}
+
+export const useCurrentUserGames = (year?: number, month?: number) => {
+  const { user } = useUser()
+  const playerId = ids[user]
+  return useGames(year, month, playerId)
 }
